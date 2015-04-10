@@ -1,12 +1,8 @@
 Changelog
 =========
 
-Version 0.2 *(not released)*
-----------------------------
+Version 0.1
+-----------
 
-* ...
-
-Version 0.1 *(2014-03-18)*
---------------------------
-
-* Initial version based on the gradle-grunt-plugin (see http://github.com/srs/gradle-grunt-plugin)
+* Initial version based on the gradle-gulp-plugin (see https://github.com/filipblondeel/gradle-gulp-plugin)
+* Added option to install gulp only once for use in multiproject builds

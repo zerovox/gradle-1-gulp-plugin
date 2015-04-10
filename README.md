@@ -1,6 +1,9 @@
 Gradle plugin for Gulp
 =======================
 
+You probably shouldn't use this. It was forked from [gradle-gulp-plugin](https://github.com/filipblondeel/gradle-gulp-plugin) and customized slightly.
+There is a better alternative, but it requires Gradle 2.
+
 This is a very simple Gradle plugin for running Gulp tasks as part of the build.
 It merely wraps calls to "gulp xyz" as "gradle gulp_xyz" tasks. Gulp is installed locally using npm.
 

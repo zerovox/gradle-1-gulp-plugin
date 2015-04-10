@@ -4,29 +4,29 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:0.4.1'
     }
 }
 
 apply plugin: 'groovy'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
-apply plugin: 'bintray'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'idea'
 
-group = 'be.filipblondeel.gradle'
+group = 'zerovox.gradle'
 
 def compatibilityVersion = 1.7
 sourceCompatibility = compatibilityVersion
 targetCompatibility = compatibilityVersion
 
 repositories {
-    jcenter()
     mavenCentral()
 }
 
 dependencies {
     compile gradleApi()
-    compile 'com.moowork.gradle:gradle-node-plugin:0.4'
+    compile 'zerovox.gradle:gradle-node-plugin:0.1'
 }
 
 task sourcesJar( type: Jar ) {
@@ -60,8 +60,10 @@ bintray {
     publications = ['mavenJava']
 
     pkg {
-        repo = 'gradle-plugins'
-        name = 'gradle-gulp-plugin'
+        repo = 'maven'
+        name = 'gradle-1-gulp-plugin'
         licenses = ['Apache-2.0']
     }
 }
+
+bintrayUpload.dependsOn build
